@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div id="code">
+  <section style="overflow: hidden; margin-bottom: -1px; visibility: visible;">
+    <section style="height: 0px; display: block; visibility: visible;">
+      <section style="user-select: text; overflow: hidden; text-align: center; line-height: 0; visibility: visible;">
+        <svg id="1-1" style="background-image: url(&quot;images/1119qingmei/2.gif&quot;); background-size: 100%; background-repeat: no-repeat; margin-top: -0.33vw; line-height: 0" viewbox="0 0 640 1144"></svg>
+        <svg id="1-1" style="background-image: url(&quot;images/1119qingmei/3.gif&quot;); background-size: 100%; background-repeat: no-repeat; margin-top: -0.33vw; line-height: 0" viewbox="0 0 640 1156"></svg>
+        <svg id="1-1" style="background-image: url(&quot;images/1119qingmei/4.gif&quot;); background-size: 100%; background-repeat: no-repeat; margin-top: -0.33vw; line-height: 0" viewbox="0 0 640 1098"></svg>
+        <svg id="1-1" style="background-image: url(&quot;images/1119qingmei/5.gif&quot;); background-size: 100%; background-repeat: no-repeat; margin-top: -0.33vw; line-height: 0" viewbox="0 0 640 910"></svg>
+  </section>
+  </section>
+  <section style="pointer-events: none;display: block;text-align: center;margin-left: auto;margin-right: auto;background-position: center top;background-repeat: no-repeat;margin-bottom:-10px;">
+    <svg viewBox="0 0 1078 2020" style="transform: scale(1);pointer-events: none;max-width: none !important;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;">
+      <g>
+      <g>
+      <g>
+      <foreignObject x="0" y="0" width="1078" height="2020">
+        <svg style="display: inline-block; width: 100%; vertical-align: top; background-position: 0% 0%; background-repeat: no-repeat; background-size: 100%; background-attachment: scroll; background-image: url(&quot;images/1119qingmei/1.png&quot;); -webkit-tap-highlight-color: transparent; user-select: none;" viewBox="0 0 1078 2020" class="">
+        </svg>
+      </foreignObject>
+      <g>
+      <g>
+      <foreignObject x="0" y="0" width="1078" height="2020" >
+        <svg style="background-image: url(&quot;images/1119qingmei/0.png&quot;); display: inline-block; background-position: 0% 0%; background-repeat: no-repeat; background-size: 100%; background-attachment: scroll; width: 100%; vertical-align: top; -webkit-tap-highlight-color: transparent; user-select: none;" viewBox="0 0 1078 2020" x="0px" y="0px" class="">
+        </svg>
+      </foreignObject>
+      <animate attributeName="opacity" calcMode="spline" keySplines="0.42 0 0.58 1.0; 0.42 0 0.58 1.0; 0.42 0 0.58 1.0; 0.42 0 0.58 1.0" values="0;1;0;1;0" begin="0" dur="2s" repeatCount="indefinite">
+      </animate>
+    </g>
+    <rect opacity="0" fill="#FFFFFF" width="2000" height="2000" style="pointer-events: painted;">
+      <animate attributeName="x" begin="click" dur="1ms" values="100000" fill="freeze" restart="never">
+      </animate>
+    </rect>
+    <set attributeName="visibility" from="visible" to="hidden" begin="click">
+    </set>
+  </g>
+  </g>
+  <animateTransform attributeName="transform" type="translate" values="289 960" dur="3s" repeatCount="indefinite" begin="click" additive="sum">
+  </animateTransform>
+  <animateTransform attributeName="transform" type="scale" values="1;60" dur="3s" fill="freeze" additive="sum" begin="click" accumulate="sum" keySplines="0.42 0 0.58 1.0" calcMode="spline">
+  </animateTransform>
+  <animateTransform attributeName="transform" type="translate" values="-289 -960" dur="3s" repeatCount="indefinite" begin="click" additive="sum">
+  </animateTransform>
+  </g>
+  <animateTransform attributeName="transform" type="translate" values="0 0;-10000 0;-10000 0" keyTimes="0;0.000000001;1" begin="click+3" dur="1000s" restart="never" fill="freeze">
+  </animateTransform>
+  </g>
+  <set attributeName="visibility" from="visible" to="hidden" begin="click+3s">
+  </set>
+  <animate attributeName="width" values="100%;359%;359%" begin="click+3s" dur="1000s" keyTimes="0;0.005;1" keySplines="0.42 0 0.58 1;0.42 0 0.58 1" calcMode="spline" fill="freeze" restart="never">
+  </animate>
+  </svg>
+  </section>
+  </section>
+  
+  
+    
+
+</div>
+<form id="J_Form" method="post" enctype="multipart/form-data" class="form-horizontal" action="#" onsubmit="return doCampaignEdit();">
+  <input type="file" accept="image/png, image/gif, image/jpeg, image/jpg" name="file[]" id="file" multiple="multiple" />
+  <input type="submit" name="submit" value="上传" />
+</form>
+<!-- <script src="js/jquery.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- <script src="js/伸长计算.js"></script> -->
+<script>
+  var projectID = "1119qingmei";
+  var endTxt = null;
+  function doCampaignEdit() {
+    var formData = new FormData($("#J_Form")[0]);
+    console.log(formData);
+    $.ajax({
+      url: "https://svgtools.im20.com.cn/User/doUploadWx",
+      type: "POST",
+      dataType: "json",
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function (data) {
+        if (data.code == 0) {
+          console.log(data);
+          $("#code").each(function () {
+            var oldText = $(this).html();
+            if (endTxt) {
+              endTxt = endTxt;
+            } else {
+              endTxt = oldText;
+            }
+            for (let i = 0; i < data.data.length; i++) {
+              endTxt = endTxt.replace("images/" + projectID + "/" + data.data[i].name, data.data[i].upl_url);
+            }
+            console.log(endTxt);
+          });
+        } else {
+          console.log(data.message);
+        }
+      },
+    });
+    return false;
+  }
+</script>
